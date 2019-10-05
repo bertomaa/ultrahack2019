@@ -310,6 +310,9 @@ class _MarketingManagementPageState extends State<MarketingManagementPage> {
     idController.text = campaigns[campaignToShow]["IdProduct"];
     facebookBool = campaigns[campaignToShow]["Facebook"];
     instagramBool = campaigns[campaignToShow]["Instagram"];
+    Image img = !(campaigns[campaignToShow]["IdProduct"] == "")
+        ? Image.asset('${campaigns[campaignToShow]['IdProduct']}.jpg')
+        : Image.asset('Image0.png');
 
     return new Row(
       children: <Widget>[
@@ -338,7 +341,7 @@ class _MarketingManagementPageState extends State<MarketingManagementPage> {
                   new Container(
                     width: 100,
                     height: 100,
-                    child: Icon(Icons.add_a_photo),
+                    child: img,
                   ),
                   Expanded(
                     child: Padding(
