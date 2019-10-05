@@ -17,6 +17,7 @@ class _RootPageState extends State<RootPage> {
     Text(
       'Index 1: Business',
       style: optionStyle,
+      
     ),
     Text(
       'Index 1: Business',
