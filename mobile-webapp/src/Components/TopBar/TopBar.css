@@ -1,0 +1,10 @@
+div.top-bar .hamburger,
+div.top-bar .shopping-cart {
+    color: white;
+}
+
+.shop-name {
+    flex-grow: 1;
+}
+
+

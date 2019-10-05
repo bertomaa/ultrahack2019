@@ -1,0 +1,22 @@
+div.search-box-container {
+    position: relative;
+    min-height: 2em;
+    margin: .5em;
+    padding: .5em;
+    background-color: var(--secondaryColor);
+    color: white;
+}
+
+.search-icon {
+    position: absolute;
+    margin-top: .15em;
+}
+
+.search-input {
+    position: absolute;
+    left: 2em;
+}
+
+.search-input > input {
+    color: white;
+}
