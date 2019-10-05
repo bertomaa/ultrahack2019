@@ -1,0 +1,465 @@
+{
+  "luis_schema_version": "4.1.0",
+  "versionId": "0.1",
+  "name": "cash_register_aibot",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "askTimes"
+    },
+    {
+      "name": "Call"
+    },
+    {
+      "name": "MyPack"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "Price"
+    },
+    {
+      "name": "Products"
+    },
+    {
+      "name": "Promotions"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Call",
+      "roles": [],
+      "hierarchyChildren": []
+    },
+    {
+      "name": "Commessa",
+      "roles": [],
+      "hierarchyChildren": []
+    },
+    {
+      "name": "Open",
+      "roles": [],
+      "hierarchyChildren": []
+    },
+    {
+      "name": "Price",
+      "roles": [],
+      "hierarchyChildren": []
+    },
+    {
+      "name": "Products",
+      "roles": [],
+      "hierarchyChildren": []
+    },
+    {
+      "name": "Promotions",
+      "roles": [],
+      "hierarchyChildren": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "are actively promoted",
+      "intent": "Promotions",
+      "entities": [
+        {
+          "entity": "Promotions",
+          "startPos": 13,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "are there no promotions available",
+      "intent": "Promotions",
+      "entities": [
+        {
+          "entity": "Promotions",
+          "startPos": 13,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "are you at the disposal of",
+      "intent": "Products",
+      "entities": [
+        {
+          "entity": "Products",
+          "startPos": 15,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "are you closed tomorrow",
+      "intent": "askTimes",
+      "entities": [
+        {
+          "entity": "Open",
+          "startPos": 8,
+          "endPos": 13
+        },
+        {
+          "entity": "Open",
+          "startPos": 15,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "ask the price",
+      "intent": "Price",
+      "entities": [
+        {
+          "entity": "Price",
+          "startPos": 8,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "can i call you",
+      "intent": "Call",
+      "entities": [
+        {
+          "entity": "Call",
+          "startPos": 6,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "can i phone",
+      "intent": "Call",
+      "entities": [
+        {
+          "entity": "Call",
+          "startPos": 6,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "could i make a call",
+      "intent": "Call",
+      "entities": [
+        {
+          "entity": "Call",
+          "startPos": 15,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "did get my pack",
+      "intent": "MyPack",
+      "entities": [
+        {
+          "entity": "Commessa",
+          "startPos": 11,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "do you have this product",
+      "intent": "Products",
+      "entities": [
+        {
+          "entity": "Products",
+          "startPos": 0,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "have you got",
+      "intent": "Products",
+      "entities": [
+        {
+          "entity": "Products",
+          "startPos": 0,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "have you got products for",
+      "intent": "Products",
+      "entities": [
+        {
+          "entity": "Products",
+          "startPos": 0,
+          "endPos": 7
+        },
+        {
+          "entity": "Products",
+          "startPos": 13,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "have you promotions on",
+      "intent": "Promotions",
+      "entities": [
+        {
+          "entity": "Promotions",
+          "startPos": 9,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "have you purchase this product",
+      "intent": "Products",
+      "entities": [
+        {
+          "entity": "Products",
+          "startPos": 9,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "how much it costs.",
+      "intent": "Price",
+      "entities": [
+        {
+          "entity": "Price",
+          "startPos": 0,
+          "endPos": 7
+        },
+        {
+          "entity": "Price",
+          "startPos": 12,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "how much we're going for",
+      "intent": "Price",
+      "entities": [
+        {
+          "entity": "Price",
+          "startPos": 0,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "i can make a phone call",
+      "intent": "Call",
+      "entities": [
+        {
+          "entity": "Call",
+          "startPos": 13,
+          "endPos": 17
+        },
+        {
+          "entity": "Call",
+          "startPos": 19,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "is my order ready",
+      "intent": "MyPack",
+      "entities": [
+        {
+          "entity": "Commessa",
+          "startPos": 6,
+          "endPos": 10
+        },
+        {
+          "entity": "Commessa",
+          "startPos": 12,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "is there a 50% discount for students",
+      "intent": "Promotions",
+      "entities": [
+        {
+          "entity": "Promotions",
+          "startPos": 11,
+          "endPos": 13
+        },
+        {
+          "entity": "Promotions",
+          "startPos": 15,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "my order has arrived",
+      "intent": "MyPack",
+      "entities": [
+        {
+          "entity": "Commessa",
+          "startPos": 3,
+          "endPos": 7
+        },
+        {
+          "entity": "Commessa",
+          "startPos": 9,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "my parcel is arrived",
+      "intent": "MyPack",
+      "entities": [
+        {
+          "entity": "Commessa",
+          "startPos": 3,
+          "endPos": 8
+        },
+        {
+          "entity": "Commessa",
+          "startPos": 10,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "my reservation will be done",
+      "intent": "MyPack",
+      "entities": [
+        {
+          "entity": "Commessa",
+          "startPos": 3,
+          "endPos": 13
+        },
+        {
+          "entity": "Commessa",
+          "startPos": 23,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "still on for today",
+      "intent": "askTimes",
+      "entities": [
+        {
+          "entity": "Open",
+          "startPos": 0,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "there are no age related discounts?",
+      "intent": "Promotions",
+      "entities": [
+        {
+          "entity": "Promotions",
+          "startPos": 25,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "what time do you open",
+      "intent": "askTimes",
+      "entities": [
+        {
+          "entity": "Open",
+          "startPos": 5,
+          "endPos": 8
+        },
+        {
+          "entity": "Open",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "what your timetable for",
+      "intent": "askTimes",
+      "entities": [
+        {
+          "entity": "Open",
+          "startPos": 10,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "what's the cost of",
+      "intent": "Price",
+      "entities": [
+        {
+          "entity": "Price",
+          "startPos": 11,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "what's the price of",
+      "intent": "Price",
+      "entities": [
+        {
+          "entity": "Price",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "what's your telefone number",
+      "intent": "Call",
+      "entities": [
+        {
+          "entity": "Call",
+          "startPos": 12,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "when opening",
+      "intent": "askTimes",
+      "entities": [
+        {
+          "entity": "Open",
+          "startPos": 5,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "when you open up",
+      "intent": "askTimes",
+      "entities": [
+        {
+          "entity": "Open",
+          "startPos": 9,
+          "endPos": 15
+        }
+      ]
+    }
+  ],
+  "settings": []
+}
