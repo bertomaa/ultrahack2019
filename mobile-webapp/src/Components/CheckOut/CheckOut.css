@@ -1,0 +1,17 @@
+div.delivery-settings,
+div.payment-settings,
+div.order-summary {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    padding: 1em;
+}
+
+div.payment-settings button {
+    margin-bottom: .5em;
+}
+
+div.payment-settings button svg {
+    margin-right: 1em;
+    min-width: 2em;
+}

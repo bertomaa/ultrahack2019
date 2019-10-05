@@ -5,6 +5,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import "./Results.css";
 import {ListItemAvatar} from "@material-ui/core";
+import SearchBox from "../SearchBox/SearchBox";
 
 export default class Results extends Component {
 
@@ -29,6 +30,7 @@ export default class Results extends Component {
     render() {
         return (
             <div>
+                <SearchBox/>
                 <p>Results for "{this.getSearchTerm()}"</p>
 
                 <List>

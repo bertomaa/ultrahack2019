@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import SpeedDialIcon from "@material-ui/lab/SpeedDialIcon/SpeedDialIcon";
 import SpeedDialAction from "@material-ui/lab/SpeedDialAction/SpeedDialAction";
 import SpeedDial from "@material-ui/lab/SpeedDial/SpeedDial";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faSms} from '@fortawesome/free-solid-svg-icons'
-import {faFacebookF, faInstagram, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
+import {faFacebookF, faInstagram, faWhatsapp} from '@fortawesome/free-brands-svg-icons';
+import "./SocialFab.css";
 
 export default class SocialFab extends Component {
 

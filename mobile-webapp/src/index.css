@@ -1,5 +1,6 @@
 :root {
-  --secondaryColor: #5399DE;
+  --primaryColor: #F2A359;
+  --secondaryColor: #EECF6D;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
 
 
 .social-fab {
-  position: absolute;
+  position: fixed;
   right: 1em;
   bottom: 1em;
 }

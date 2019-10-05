@@ -1,3 +1,6 @@
+div.top-bar {
+    margin-bottom: 1em;
+}
 div.top-bar .hamburger,
 div.top-bar .shopping-cart {
     color: white;
@@ -7,4 +10,8 @@ div.top-bar .shopping-cart {
     flex-grow: 1;
 }
 
+
+div.app-bar {
+    background-color: var(--primaryColor);
+}
 
