@@ -14,13 +14,23 @@ class _RootPageState extends State<RootPage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static  List<Widget> _widgetOptions = <Widget>[
-    new HomePage(),
+    Text(
+      'Index 1: Business',
+      style: optionStyle,
+    ),
     Text(
       'Index 1: Business',
       style: optionStyle,
     ),
     Text(
       'Index 2: School',
+      style: optionStyle,
+    ),Text(
+      'Index 1: Business',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 1: Business',
       style: optionStyle,
     ),
   ];
@@ -43,16 +53,25 @@ class _RootPageState extends State<RootPage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('HomePage'),
+            icon: Icon(Icons.find_replace),
+            title: Text('Marketing Management'),
+            backgroundColor: Colors.blue
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
-            title: Text('Shopping List'),
+            title: Text('Inventory'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            title: Text('My Shopping Cart'),
+            icon: Icon(Icons.file_upload),
+            title: Text('Ritiro'),//pagina ordini da preparare che devono essere ritirati
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.file_upload),
+            title: Text('Clients List'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            title: Text('Settings'),
           ),
         ],
         currentIndex: _selectedIndex,

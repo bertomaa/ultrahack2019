@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -11,26 +12,71 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      // Create a grid with 2 columns. If you change the scrollDirection to
-      // horizontal, this produces 2 rows.
-      crossAxisCount: 2,
-      // Generate 100 widgets that display their index in the List.
-      children: List.generate(8, (index) {
-        return buildSquare("prova", 20, index);
-      }),
-    );
+    return Text("");
   }
 
   Widget buildSquare(String productName, int discount, int id) {
-    return new Column(
-      children: <Widget>[
-        Image.asset("assets/Image$id.png", fit: BoxFit.scaleDown,),
-        ListTile(
-          title: Text(productName),
-          trailing: Text(discount.toString()),
-        )
-      ],
+    return Stack(children: <Widget>[
+      GestureDetector(
+        onTap: () {
+          _showDiscountQR("ciao");
+        },
+        child: new Card(
+          child: new Column(
+            children: <Widget>[
+              Container(
+                height: 140,
+                decoration: new BoxDecoration(
+                  image: DecorationImage( 
+                    image: new AssetImage("assets/Image$id.png"),
+                    fit: BoxFit.scaleDown,
+                  ),
+                ),
+              ),
+              ListTile(
+                title: Text(productName),
+              ),
+            ],
+          ),
+        ),
+      ),
+      new Positioned(
+        top: 160,
+        left: 110,
+        height: 30,
+        child: Container(
+          decoration: new BoxDecoration(
+            color: Colors.red,
+            shape: BoxShape.rectangle,
+          ),
+          child: Center(
+              child: Text(
+            "Discount " + discount.toString() + "%",
+            style: new TextStyle(color: Colors.white),
+          )),
+        ),
+      ),
+    ]);
+  }
+
+  void _showDiscountQR(String discountCode) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: new Text("Discount QR:"),
+          content: SizedBox(height: 100, width: 100,),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            new FlatButton(
+              child: new Text("Close"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 }
