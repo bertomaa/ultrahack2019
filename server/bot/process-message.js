@@ -53,7 +53,7 @@ const getAnswer = async (message) => {
         case 'Price':
             return 'You can find all our products on our website';
         case 'MyPack':
-            return 'You can all the information about your order on our website';
+            return 'You can find all the information about your order on our website';
         case 'None':
         default:
             return 'Nice question!';
